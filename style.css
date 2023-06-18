@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --first_color: #fba11f;
+  --second_color: #bdcfde;
+  --text: #314757;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.color_change{
+    background-color: #314757 !important;
+}
+
+html, body{
+    height: 100vh;
+    padding: 30px;
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* nav bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+#list_nav{
+
+    display: flex;
+    gap: 15px;
+    
+}
+#list_nav button{
+    font-size: 18px;
+    font-family: inherit;
+    border: 0;
+    border-radius: 50px;
+    padding: 5px 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#list_nav li:last-child button  {
+    background-color: var(--second_color);
+    color: var(--text);
+}
+
+#list_nav li:first-child button  {
+    background-color: var(--first_color);
+    color: white;
+}
+
+#list_nav li:hover:last-child button{
+    background-color: #9aabb8;
+}
+
+#list_nav li:hover:first-child button{
+    background-color: #d68919;
+}
+
+/* game */
+#list_game{
+    width: 400px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr) );
+}
+
+#list_game li{
+    height: 80px;
+    background-color: var(--second_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#list_game li img{
+    width: 45px;
+    height: 45px;
+}
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+footer > * {
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+footer h3{
+    background-color: var(--second_color);
+    color: var(--text);
+    padding: 5px 20px;
+}
+
+footer p{
+    background-color: var(--text);
+    color: white;
+    padding: 1px 20px;
+}
